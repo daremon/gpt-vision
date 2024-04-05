@@ -1,0 +1,46 @@
+body {
+  font-size: 16px;
+  padding: 10px 10px;
+  margin: 0px auto;
+  font-family: sans-serif;
+}
+
+td {
+  vertical-align: top;
+}
+
+.error {
+  color: red;
+}
+
+#canvas {
+  border: 1px solid #000;
+  transform: scaleX(-1);
+}
+
+#promptOutput {
+  margin: 0 0 10px 0;
+  width: 500px;
+  height: 200px;
+  overflow: auto;
+  font-family: sans-serif;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: left;
+  font-weight: normal;
+}
+
+#startButton {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+#lastImage {
+  font-size: 8px;
+}
+#lastImage img {
+  transform: scaleX(-1);
+  height: 82px;
+  border:1px solid #999;
+}

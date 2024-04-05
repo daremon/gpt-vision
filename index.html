@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPT vision test</title>
+  <link rel="stylesheet" type="text/css" href="src/style.css">
+</head>
+
+<body>
+<table border="0" cellspacing="0">
+  <tr>
+    <td>
+      <video autoplay playsinline webkit-playsinline muted hidden></video>
+      <canvas id="canvas" width="500" height="375"></canvas>
+    </td>
+    <td>
+      <div id="promptOutput"></div>
+      Γλώσσα: <select id='languageSelect'></select>
+      <button id="startButton">Start</button>
+      <span id="micStatus"></span>
+      <br><br>
+      <small>Εικόνα που στάλθηκε:</small>
+      <div id="lastImage">-</div>
+    </td>
+  <tr>
+    <td>
+      Ρωτήστε για χειρονομίες, emojis, αντικείμενα, τι υπάρχει πίσω σας,
+      <br>
+      τα ρούχα σας ή τα χαρακτηριστικά σας αλλά και σύνθετες ερωτήσεις πχ
+      <br>
+      ποια αντικείμενα τρώγονται, τίτλους βιβλίων κλπ
+      <br><br>
+      Κώδικας στο <a href="https://github.com/daremon/gpt-vision" target="_blank">GitHub</a>
+    </td>
+  </tr>
+
+
+</table>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
