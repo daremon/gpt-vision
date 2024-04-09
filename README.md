@@ -4,6 +4,8 @@ A simple but impressive demo of GPT vision model
 
 Inspiration and starting code from https://github.com/gregsadetsky/sagittarius
 
+A live demo can (sometimes) be found at https://gpt-vision.daremon.gr/
+
 ## Instructions
 
 - Clone this repo
