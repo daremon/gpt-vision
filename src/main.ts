@@ -3,6 +3,7 @@ import { startDictation, stopDictation } from "./dictation";
 import { startCamera, stopCamera } from "./camera";
 import { Speech } from "./speech";
 import { buildLanguageSelect } from "./dictationLanguages";
+import { OPENAI_MODEL, OPEN_AI_SYSTEM_PROMPT } from "./openai";
 
 let isRunning = false;
 let listeningInterval = null;
@@ -74,6 +75,9 @@ function isDesktopChrome() {
 
 document.addEventListener("DOMContentLoaded", async function () {
   buildLanguageSelect();
+  document.getElementById("model_used").innerHTML = OPENAI_MODEL;
+  document.getElementById("prompt_used").innerHTML = OPEN_AI_SYSTEM_PROMPT;
+
   if (!isDesktopChrome()) {
     (document.querySelector("#startButton") as any).disabled = true;
     document.querySelector("#micStatus").innerHTML = '<span class="error"><br>Only works in desktop Chrome browsers for now</span>';

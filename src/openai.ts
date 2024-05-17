@@ -5,13 +5,13 @@ import { updatePromptOutput } from "./main";
 import { type Speech } from "./speech";
 
 const DEFAULT_DEV_API_KEY = import.meta.env.VITE_OPENAI_KEY;
-
-const OPEN_AI_SYSTEM_PROMPT = `the user will take a photo of himself using his webcam.
-they will show you things visually and ask you questions.
-be extremely brief and very concise, no more than 10 words.
-be extremely concise. this is very important for me.
-do not comment on what the person is wearing or where they are sitting or their background unless they ask.
-focus on the question they ask you.
+export const OPENAI_MODEL = "gpt-4o";
+export const OPEN_AI_SYSTEM_PROMPT = `The user will take a photo of himself using his webcam.
+They will show you things visually and ask you questions.
+Be extremely brief and very concise, no more than 10 words.
+Be extremely concise. this is very important for me.
+Do not comment on what the person is wearing or where they are sitting or their background unless they ask.
+Focus on the question they ask you.
 `;
 
 function formatErrorMessage(originalMessage: string): [string, number | null] {
@@ -65,7 +65,7 @@ export async function makeOpenAIRequest(
   try {
     const stream = await openai.chat.completions.create({
       messages: messages,
-      model: "gpt-4o",
+      model: OPENAI_MODEL,
       max_tokens: 3500,
       temperature: 0,
       stream: true,

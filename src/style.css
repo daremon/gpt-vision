@@ -44,3 +44,7 @@ td {
   height: 82px;
   border:1px solid #999;
 }
+
+#prompt_used {
+  font-size: 12px;
+}
